@@ -1,38 +1,38 @@
-//complete this code
+// Rectangle Class
 class Rectangle {
-	constructor(width, height) {
+  constructor(width, height) {
     this._width = width;
     this._height = height;
   }
 
-  // getters
+  // Getter for width
   get width() {
     return this._width;
   }
 
+  // Getter for height
   get height() {
     return this._height;
   }
 
-  // method to calculate area
+  // Method to calculate area
   getArea() {
     return this._width * this._height;
   }
 }
 
-}
-
+// Square Class (inherits from Rectangle)
 class Square extends Rectangle {
-	 constructor(side) {
-    super(side, side); // call parent constructor
+  constructor(side) {
+    super(side, side); // both width and height are same
   }
 
-  // method to calculate perimeter
+  // Method to calculate perimeter
   getPerimeter() {
-    return this.width * 4;
+    return this._width * 4;
   }
 }
 
-// Do not change the code below this line
+// Make classes available globally (important for Cypress)
 window.Rectangle = Rectangle;
 window.Square = Square;
